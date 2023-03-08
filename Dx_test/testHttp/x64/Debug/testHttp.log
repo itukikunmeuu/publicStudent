@@ -1,9 +1,0 @@
-﻿  httpMain.cpp
-C:\Users\student\Desktop\Resources\teacher\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\student\Desktop\Resources\teacher\Dx_test\testHttp\httpMain.cpp(107,50): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-  コード生成しています。
-  1 of 43 functions ( 2.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  コード生成が終了しました。
-  testHttp.vcxproj -> C:\Users\student\Desktop\Resources\teacher\Dx_test\x64\Debug\testHttp.exe
