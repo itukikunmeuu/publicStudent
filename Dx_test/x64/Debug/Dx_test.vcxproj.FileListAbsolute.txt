@@ -1,0 +1,3 @@
+C:\Users\mh_naito\Desktop\Resource\github\teacher\Dx_test\x64\Debug\Dx_test.exe
+C:\Users\student\Desktop\Resources\teacher\Dx_test\x64\Debug\Dx_test.exe
+C:\MySpace\github\teacher\Dx_test\x64\Debug\Dx_test.exe
