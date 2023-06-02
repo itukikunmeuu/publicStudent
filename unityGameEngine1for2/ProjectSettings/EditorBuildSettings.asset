@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Ge1_Unity2/Manager.unity
-    guid: 45e97b0b0a83d3c4e801ddeee77566fa
+    path: Assets/Cookie2/Cookie2.unity
+    guid: f240083ca6a9a9146be03209be1ea546
+  - enabled: 1
+    path: Assets/Cookie2/RunCookie2.unity
+    guid: 746a90d2f70e63d4c9fa357ccb2ee3fa
+  - enabled: 1
+    path: Assets/Cookie2/GameOver.unity
+    guid: e7992560b34964b449d6705c52fe0197
   m_configObjects: {}
