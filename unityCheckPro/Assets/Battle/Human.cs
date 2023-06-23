@@ -6,49 +6,68 @@ public class Human : MonoBehaviour
 {
     Animator anim;
     Rigidbody rb;
-    Vector3 _move,_moveZero,_moveRight;
-    bool flag=false;
+    Vector3 _move,_moveZero,_moveRight,_moveLeft;
     int timer=0;
+    int time = 28;
+    bool _moving = false;
+    public static bool _attaking = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody>();
-        flag = false;
         _move = new Vector3(0,0,0);
-        _moveRight = new Vector3(10.0f,0,0);
+        _moveRight = new Vector3(1.0f,0,0);
+        _moveLeft = new Vector3(-1.0f, 0, 0);
         _moveZero = new Vector3(0,0,0);
     }
 
     void FixedUpdate()
     {
-        rb.velocity = _move;
+        rb.velocity += _move;
 
-        if(timer > 40 && flag ==false)
+        //ìÆçÏÉtÉâÉO
+        if(_moving ==true)
         {
-            Walk();
-            flag = true;
-        }
-        else if(timer < 80 && flag == true)
-        {
-            //‰Ωï„ÇÇ„Åó„Å™„ÅÑ
-        }
-        else if(flag == true)
-        {
-            timer =0;
-            _move = _moveZero;
-            flag=false;
-        }
+            //éwíËéûä‘ìÆÇ≠
+            if(timer < time)
+            {
+                timer++;//É^ÉCÉ}çXêV
+            }
+            else
+            {
+                //ë¨ìxèâä˙âª
+                _move = _moveZero;
+                rb.velocity = _moveZero;
+                //ÉtÉâÉOèâä˙âª
+                _moving = false;
+                _attaking = false;
+                //É^ÉCÉ}èâä˙âª
+                timer = 0;
+            }
 
-        //timer
-        timer++;
+        }
 
     }
 
-    void Walk()
+    public void RightWalk()
     {
         anim.SetTrigger("walk");
         _move = _moveRight;
+        _moving = true;
+    }
+
+    public void LeftWalk()
+    {
+        anim.SetTrigger("back");
+        _move = _moveLeft;
+        _moving = true;
+    }
+    public void Attack()
+    {
+        anim.SetTrigger("attack");
+        _moving = true;
+        _attaking = true;
     }
 }

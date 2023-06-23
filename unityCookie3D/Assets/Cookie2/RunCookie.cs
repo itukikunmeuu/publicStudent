@@ -10,7 +10,6 @@ public class RunCookie : MonoBehaviour
     Rigidbody rb;
     Vector3 _move, _moveRight, _moveLeft, _jump, _moveFirst;
     int conFlag = 0;
-    int time = 0;
     bool jumpFlag = false;
     bool moveFlag = true;
     float maxJump = 0.8f;
